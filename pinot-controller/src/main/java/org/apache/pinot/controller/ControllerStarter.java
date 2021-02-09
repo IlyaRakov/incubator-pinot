@@ -388,6 +388,7 @@ public class ControllerStarter implements ServiceStartable {
     final AccessControlFactory accessControlFactory;
     try {
       accessControlFactory = (AccessControlFactory) Class.forName(accessControlFactoryClass).newInstance();
+      accessControlFactory.init(_config);
     } catch (Exception e) {
       throw new RuntimeException("Caught exception while creating new AccessControlFactory instance", e);
     }

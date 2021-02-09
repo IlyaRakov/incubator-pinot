@@ -121,6 +121,11 @@ public class SegmentGenerationJobSpec implements Serializable {
    */
   private TlsSpec _tlsSpec;
 
+  /**
+   * Controller auth token
+   */
+  private String _authToken;
+
   public ExecutionFrameworkSpec getExecutionFrameworkSpec() {
     return _executionFrameworkSpec;
   }
@@ -272,6 +277,14 @@ public class SegmentGenerationJobSpec implements Serializable {
 
   public void setTlsSpec(TlsSpec tlsSpec) {
     _tlsSpec = tlsSpec;
+  }
+
+  public String getAuthToken() {
+    return _authToken;
+  }
+
+  public void setAuthToken(String authToken) {
+    _authToken = authToken;
   }
 }
 
